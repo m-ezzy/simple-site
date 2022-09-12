@@ -16,11 +16,11 @@ app.get("/", (request, response) => {
 });*/
 
 app.get("/get_chat_list", async (req, res) => {
-	var db = require('./database.js');
+	var db = require('./nodejs/database.js');
 
 	var sql = 'SELECT * from chats';
 	let rows = await db.con.query(sql);
-	
+
 	res.contentType('text/json');
 	res.send(JSON.parse(JSON.stringify(rows)));
 });
