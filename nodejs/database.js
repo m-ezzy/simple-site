@@ -1,4 +1,5 @@
 var mysql = require('mysql');
+var util = require('util');
 
 /*
 var con = mysql.createConnection({
@@ -16,6 +17,8 @@ var con = mysql.createConnection({
 	password: "]uel{GT:&#&E~f}d",
 	database: "simple-site",
 });
+
+con.query = util.promisify(con.query).bind(con);
 
 con.connect(function(err) {
 	if (err) throw err;

@@ -15,14 +15,15 @@ app.get("/", (request, response) => {
 	response.sendFile(`${__dirname}/index.html`);
 });*/
 
-app.get("/get_chat_list", (req, res) => {
-	var get_chat_list = require('./nodejs/get_chat_list');
-	var json = get_chat_list.result_g();
+app.get("/get_chat_list", async (req, res) => {
+	var db = require('./database.js');
 
+	var sql = 'SELECT * from chats';
+	let rows = await db.con.query(sql);
+	
 	res.contentType('text/json');
-	res.send(json);
+	res.send(JSON.parse(JSON.stringify(rows)));
 });
-
 server.listen(port, () => {
 	console.log(`listening on: ${port}`);
 });
