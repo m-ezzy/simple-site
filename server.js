@@ -25,4 +25,4 @@ app.get("/get_chat_list", (req, res) => {
 
 server.listen(port, () => {
 	console.log(`listening on: ${port}`);
-}
+});
