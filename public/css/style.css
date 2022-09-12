@@ -1,0 +1,20 @@
+* {
+    background-color: aqua;
+    display: flex;
+}
+#chats {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 80vw;
+    height: 50vh;
+    background-color: crimson;
+}
+.previous_list {
+    position: absolute;
+    left: 10vw;
+    top: 10px;
+    width: 10vw;
+    height: 10vh;
+    background-color: blueviolet;
+}
