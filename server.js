@@ -18,7 +18,7 @@ app.get("/", (request, response) => {
 app.get("/get_chat_list", async (req, res) => {
 	var db = require('./nodejs/database.js');
 
-	var sql = 'SELECT * from chats';
+	var query = 'SELECT * from chats';
 	let rows = await db.query(query).catch(err => { throw err });
 
 	res.contentType('text/json');
