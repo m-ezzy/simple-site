@@ -1,5 +1,5 @@
-var mysql = require('mysql');
-var util = require('util');
+let mysql = require('mysql');
+let util = require('util');
 
 /*
 var con = mysql.createConnection({
@@ -9,7 +9,7 @@ var con = mysql.createConnection({
 	database: "skyland",
 });*/
 
-var con = mysql.createConnection({
+let con = mysql.createConnection({
 	host: "skyland-362206:us-central1:mysql-db-1",
 	//host: "35.184.85.39",
 	//host: "https://skyland-362206.el.r.appspot.com/",
