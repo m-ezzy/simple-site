@@ -6,8 +6,8 @@ chats.addEventListener('click', async () => {
 
 	console.log(result);
 
-	result.forEach(r => {
-		chats.innerHTML += (r['user_name'] + r['first_name']);
+	Object.keys(result).forEach(r => {
+		chats.innerHTML += r;
 	});
 });
 

@@ -16,15 +16,14 @@ app.get("/", (request, response) => {
 });*/
 
 app.get("/chats", async (req, res) => {
-	/*
 	var db = require('./nodejs/database.js');
 
 	var query = 'SELECT * from chats';
 	let rows = await db.query(query).catch(err => { throw err });
-	*/
+
 	res.contentType('text/json');
-	//res.send(JSON.parse(JSON.stringify(rows)));
-	res.send({'key': 'hhhhhhhhhhhhhhhhhhhhh'});
+	res.send(JSON.parse(JSON.stringify(rows)));
+	//res.send({'key': 'hhhhhhhhhhhhhhhhhhhhh'});
 });
 server.listen(port, () => {
 	console.log(`listening on: ${port}`);

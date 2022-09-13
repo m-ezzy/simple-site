@@ -10,7 +10,8 @@ var con = mysql.createConnection({
 });*/
 
 let db = mysql.createConnection({
-	host: "skyland-362206:us-central1:mysql-db-1",
+	//host: "skyland-362206:us-central1:mysql-db-1",
+	socketPath: "/cloudsql/skyland-362206:us-central1:mysql-db-1",
 	//host: "35.184.85.39",
 	//host: "https://skyland-362206.el.r.appspot.com/",
 	/*user: "root",
@@ -18,6 +19,7 @@ let db = mysql.createConnection({
 	user: "admin1",
 	password: "r^hx81{F-%75&Naa",
 	database: "simple-site",
+	//port: 8081
 });
 
 db.query = util.promisify(db.query).bind(db);
