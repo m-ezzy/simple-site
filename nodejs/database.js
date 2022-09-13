@@ -22,11 +22,9 @@ let db = mysql.createConnection({
 
 db.query = util.promisify(db.query).bind(db);
 
-db.connect();
-/*
-con.connect((err) => {
-	if (err) throw err;
+db.connect((err) => {
+	if (err) { throw err; }
 	console.log("mysql database connected!");
-});*/
+});
 
 module.exports = db;

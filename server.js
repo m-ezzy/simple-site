@@ -15,7 +15,7 @@ app.get("/", (request, response) => {
 	response.sendFile(`${__dirname}/index.html`);
 });*/
 
-app.get("/get_chat_list", async (req, res) => {
+app.get("/chats", async (req, res) => {
 	var db = require('./nodejs/database.js');
 
 	var query = 'SELECT * from chats';
