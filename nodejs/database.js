@@ -9,7 +9,7 @@ var con = mysql.createConnection({
 	database: "skyland",
 });*/
 
-let con = mysql.createConnection({
+let db = mysql.createConnection({
 	host: "skyland-362206:us-central1:mysql-db-1",
 	//host: "35.184.85.39",
 	//host: "https://skyland-362206.el.r.appspot.com/",
@@ -20,13 +20,13 @@ let con = mysql.createConnection({
 	database: "simple-site",
 });
 
-con.query = util.promisify(con.query).bind(con);
+db.query = util.promisify(db.query).bind(db);
 
-con.connect();
+db.connect();
 /*
 con.connect((err) => {
 	if (err) throw err;
 	console.log("mysql database connected!");
 });*/
 
-exports.con = con;
+module.exports = db;
